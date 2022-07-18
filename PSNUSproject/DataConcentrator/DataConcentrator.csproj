@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{024884F0-496F-4426-A0CE-45FF39AE24A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataConcentrator</RootNamespace>
+    <AssemblyName>DataConcentrator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alarm.cs" />
+    <Compile Include="AlarmHistory.cs" />
+    <Compile Include="AnalogInput.cs" />
+    <Compile Include="AnalogOutput.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="DictionaryThreads.cs" />
+    <Compile Include="DigitalInput.cs" />
+    <Compile Include="DigitalOutput.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="IOContext.cs" />
+    <Compile Include="Migrations\202207051518436_InitialCreate.cs" />
+    <Compile Include="Migrations\202207051518436_InitialCreate.Designer.cs" />
+    <Compile Include="Migrations\202207051605282_init.cs" />
+    <Compile Include="Migrations\202207051605282_init.Designer.cs" />
+    <Compile Include="Migrations\202207051622426_intid.cs" />
+    <Compile Include="Migrations\202207051622426_intid.Designer.cs" />
+    <Compile Include="Migrations\202207051650292_identity.cs" />
+    <Compile Include="Migrations\202207051650292_identity.Designer.cs" />
+    <Compile Include="Migrations\202207051659456_current.cs" />
+    <Compile Include="Migrations\202207051659456_current.Designer.cs" />
+    <Compile Include="Migrations\202207070840406_alarmHist.cs" />
+    <Compile Include="Migrations\202207070840406_alarmHist.Designer.cs" />
+    <Compile Include="Migrations\202207071039059_newmigration.cs" />
+    <Compile Include="Migrations\202207071039059_newmigration.designer.cs">
+      <DependentUpon>202207071039059_newmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207082107483_priority.cs" />
+    <Compile Include="Migrations\202207082107483_priority.designer.cs">
+      <DependentUpon>202207082107483_priority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207091157100_alarming.cs" />
+    <Compile Include="Migrations\202207091157100_alarming.designer.cs">
+      <DependentUpon>202207091157100_alarming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207091315433_alarmtagname.cs" />
+    <Compile Include="Migrations\202207091315433_alarmtagname.designer.cs">
+      <DependentUpon>202207091315433_alarmtagname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207101854042_acknowledgements.cs" />
+    <Compile Include="Migrations\202207101854042_acknowledgements.designer.cs">
+      <DependentUpon>202207101854042_acknowledgements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Output.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PLCSimulator\PLCSimulator.csproj">
+      <Project>{DC33BD88-1C29-4D05-8BB6-C41323290719}</Project>
+      <Name>PLCSimulator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202207051518436_InitialCreate.resx" />
+    <EmbeddedResource Include="Migrations\202207051605282_init.resx" />
+    <EmbeddedResource Include="Migrations\202207051622426_intid.resx" />
+    <EmbeddedResource Include="Migrations\202207051650292_identity.resx" />
+    <EmbeddedResource Include="Migrations\202207051659456_current.resx" />
+    <EmbeddedResource Include="Migrations\202207070840406_alarmHist.resx" />
+    <EmbeddedResource Include="Migrations\202207071039059_newmigration.resx">
+      <DependentUpon>202207071039059_newmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207082107483_priority.resx">
+      <DependentUpon>202207082107483_priority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207091157100_alarming.resx">
+      <DependentUpon>202207091157100_alarming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207091315433_alarmtagname.resx">
+      <DependentUpon>202207091315433_alarmtagname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207101854042_acknowledgements.resx">
+      <DependentUpon>202207101854042_acknowledgements.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

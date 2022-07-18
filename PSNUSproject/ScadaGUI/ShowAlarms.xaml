@@ -1,0 +1,34 @@
+﻿<Window x:Class="ScadaGUI.ShowAlarms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScadaGUI"
+        mc:Ignorable="d"
+        Title="ShowAlarms" Height="300" Width="600">
+    <Grid>
+        <DataGrid Name="AlarmsGrid" IsReadOnly="True" SelectedItem="{Binding SelectedAlarm}" SelectionMode="Single" AutoGenerateColumns="False" Margin="10,10,10,55">
+            <DataGrid.Resources>
+                <ImageBrush x:Key="ConfirmBtnImage" ImageSource="\Images\confirmIcon.png"/>
+                <ImageBrush x:Key="DeleteBtnImage" ImageSource="\Images\deleteIcon.png"/>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="*"/>
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*"/>
+                <DataGridTextColumn Header="Activated" Binding="{Binding Activated}" Width="*"/>
+                <DataGridTextColumn Header="Upper Value" Binding="{Binding OnUpperVal}" Width="*"/>
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Background="LightGray">
+                                <Button Background="{StaticResource ConfirmBtnImage}" ToolTip="Confirm" Height="30" Width="30" Click="ConfirmAlarm_Click"/>
+                                <Button Background="{StaticResource DeleteBtnImage}" ToolTip="Delete" Height="30" Width="30" Click="DeleteAlarm_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

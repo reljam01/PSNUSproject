@@ -1,0 +1,12 @@
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\PLCSimulator.dll.config
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\PLCSimulator.dll
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\PLCSimulator.pdb
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\EntityFramework.dll
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\EntityFramework.xml
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\obj\Debug\PLCSimulator.csproj.AssemblyReference.cache
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\obj\Debug\PLCSimulator.csproj.CoreCompileInputs.cache
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\obj\Debug\PLCSimulator.csproj.CopyComplete
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\obj\Debug\PLCSimulator.dll
+C:\Users\relja\Desktop\zad\PSNUSproject\PLCSimulator\obj\Debug\PLCSimulator.pdb
